@@ -59,4 +59,5 @@ PRODUCT_PACKAGES += \
     libsamsungSoundbooster_plus \
     libswdap \
     librecordalive \
+    libsec-ril-dsds \
     libsec-ril
