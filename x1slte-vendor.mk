@@ -6,13 +6,12 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/x1slte
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/x1slte/proprietary/vendor/etc/SoundBoosterParam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/SoundBoosterParam.txt \
+    vendor/samsung/x1slte/proprietary/vendor/etc/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/LVACFS_Configuration.txt \
+    vendor/samsung/x1slte/proprietary/vendor/etc/LVACFS_ControlParams.txt:$(TARGET_COPY_OUT_VENDOR)/etc/LVACFS_ControlParams.txt \
     vendor/samsung/x1slte/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/samsung/x1slte/proprietary/vendor/etc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
-    vendor/samsung/x1slte/proprietary/vendor/etc/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
     vendor/samsung/x1slte/proprietary/vendor/etc/nfc/sec_s3nsen4_hwreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen4_hwreg.bin \
     vendor/samsung/x1slte/proprietary/vendor/etc/nfc/sec_s3nsen4_swreg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/sec_s3nsen4_swreg.bin \
-    vendor/samsung/x1slte/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/samsung/x1slte/proprietary/vendor/firmware/APBargeIn_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBargeIn_AUDIO_SLSI.bin \
     vendor/samsung/x1slte/proprietary/vendor/firmware/APBiBF_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APBiBF_AUDIO_SLSI.bin \
     vendor/samsung/x1slte/proprietary/vendor/firmware/APDV_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APDV_AUDIO_SLSI.bin \
@@ -50,14 +49,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/x1slte/proprietary/vendor/tee/driver/00000000-0000-0000-0000-53626f786476:$(TARGET_COPY_OUT_VENDOR)/tee/driver/00000000-0000-0000-0000-53626f786476
 
 PRODUCT_PACKAGES += \
+    librecordalive \
+    libswdap \
     camera.exynos990 \
     libexynoscamera3 \
     libexynoscamera_bayergdc_plugin \
     libexynoscamera_fakemultiframe \
     libexynoscamera_vpl_plugin \
-    libwrappergps \
-    libsamsungSoundbooster_plus \
-    libswdap \
-    librecordalive \
     libsec-ril-dsds \
-    libsec-ril
+    libsec-ril \
+    libwrappergps
